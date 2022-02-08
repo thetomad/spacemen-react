@@ -1,0 +1,55 @@
+.section {
+  color: white;
+  text-align: center;
+  padding-bottom: 4em;
+  margin: 0 10em;
+}
+
+.title {
+  font-size: 1rem;
+}
+
+.title span {
+  text-transform: uppercase;
+  display: block;
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+.title span::before {
+  content: " ";
+  position: absolute;
+  width: 6em;
+  background: var(--primary);
+  height: 0.4em;
+  bottom: 0;
+  z-index: -1;
+  margin-left: -0.3em;
+}
+
+.btn {
+  margin-right: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: white;
+  background-color: var(--primary);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 16px;
+}
+
+.btn a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+@media (min-width: 930px) {
+  .section {
+    text-align: left;
+  }
+}

@@ -1,0 +1,40 @@
+.popup {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  width: 30rem;
+  display: block;
+  position: fixed;
+  top: 20vh;
+  left: calc(50% - 15rem);
+  z-index: 99;
+}
+
+.title {
+  color: black;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.subtitle {
+  color: black;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.btn {
+  margin-right: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: white;
+  background-color: var(--primary);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 16px;
+}
