@@ -6,16 +6,8 @@ import Popup from "./Popup";
 import classes from "./AstroItem.module.css";
 
 function AstroItem(props) {
-  const [popupIsOpen, setPopupIsOpen] = useState(false);
   let history = useNavigate();
-
-  function popupHandler() {
-    setPopupIsOpen(true);
-  }
-
-  function closePopupHandler() {
-    setPopupIsOpen(false);
-  }
+  
   return (
     <div className={classes.card}>
       <div>
@@ -23,7 +15,7 @@ function AstroItem(props) {
         <p className={classes.card__subtitle}>{props.craft}</p>
       </div>
       <div className={classes.card__btns}>
-        <button className={classes.card__btn} onClick={popupHandler}>
+        <button className={classes.card__btn} onClick={() => props.popupIsOpen(props.name, props.craft)}>
           Pop-up
         </button>
         <button
@@ -35,15 +27,6 @@ function AstroItem(props) {
           Details
         </button>
       </div>
-      {popupIsOpen && (
-        <Popup
-          name={props.name}
-          craft={props.craft}
-          onCancel={closePopupHandler}
-          onConfirm={closePopupHandler}
-        />
-      )}
-      {popupIsOpen && <Backdrop onCancel={closePopupHandler} />}
       
     </div>
   );
