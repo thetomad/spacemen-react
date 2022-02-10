@@ -35,7 +35,6 @@ function AstroItem(props) {
           Details
         </button>
       </div>
-
       {popupIsOpen && (
         <Popup
           name={props.name}
@@ -45,6 +44,7 @@ function AstroItem(props) {
         />
       )}
       {popupIsOpen && <Backdrop onCancel={closePopupHandler} />}
+      
     </div>
   );
 }
